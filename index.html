@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Bătălia de la Shiroyama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Quintessential&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background particles -->
+    <canvas id="particles"></canvas>
+
+    <section class="centered-section">
+
+    <header>
+        <h1>Bătălia de la Shiroyama</h1>
+        <h2 class="subtitle">Ultimii samurai</h2>
+    </header>
+
+    <div class="container">
+
+        <nav class="sidebar">
+            <h3>Meniu</h3>
+            <a href="#home">Acasă</a>
+            <a href="#meiji">Restaurarea Meiji</a>
+            <a href="#satsuma">Rebeliunea Satsuma</a>
+            <a href="#shiroyama">Bătălia de la Shiroyama</a>
+            <a href="#saigo">Moartea lui Saigō Takamori - mituri și legende</a>
+            <a href="#urmari-si-impact">Urmări și impact</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#quiz">Quiz</a>
+            <div class="progress-track">
+            <div id="progress-line"></div>
+        </nav>
+
+        <main>
+            <section id="home">
+                <h2 class="fade-title">Introducere</h2>
+                <p>
+                    <span id="home"></span>
+                </p>
+            </section>
+
+            <section id="meiji">
+                <h2 class="fade-title">Restaurarea Meiji</h2>
+                <p>
+                    <span id="meiji-prezentare"></span>
+                </p>
+            </section>
+
+            <section id="satsuma">
+                <h2 class="fade-title">Rebeliunea Satsuma</h2>
+                <p>
+                    <span id="satsuma"></span>
+                </p>
+            </section>
+
+            <section id="shiroyama">
+                <h2 class="fade-title">Bătălia de la Shiroyama</h2>
+                <p>
+                    <span id="shiroyama"></span>
+                </p>
+            </section>
+
+            <section id="saigo">
+                <h2 class="fade-title">Moartea lui Saigō Takamori - mituri și legende</h2>
+                <p>
+                    <span id="saigo"></span>
+                </p>
+            </section>
+
+            <section id="urmari-si-impact">
+                <h2 class="fade-title">Urmări și impact</h2>
+                <p>
+                    <span id="urmari-si-impact"></span>
+                </p>
+            </section>
+
+            <section id="galerie">
+                <h2 class="fade-title">Galerie</h2>
+                <div class="gallery">
+                    <img src="https://via.placeholder.com/300x200">
+                    <img src="https://via.placeholder.com/300x200">
+                    <img src="https://via.placeholder.com/300x200">
+                </div>
+            </section>
+
+            <section id="quiz">
+                <h2 class="fade-title">Quiz</h2>
+
+                <div class="question">
+                    <p>În ce an a avut loc bătălia?</p>
+                    <button data-correct="false">1868</button>
+                    <button data-correct="true">1877</button>
+                    <button data-correct="false">1890</button>
+                </div>
+
+                <p id="result"></p>
+            </section>
+
+        </main>
+
+        <footer>
+            © 2026 Iuliana-Mihaela Corbu
+        </footer>
+    
+    </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

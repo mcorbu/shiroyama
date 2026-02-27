@@ -1,0 +1,313 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+/* GLOBAL */
+body {
+    background: #2b2727;
+    color: #202020;
+    overflow-x: hidden;
+    line-height: 1.8;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    left: 12px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(192,57,43,0.5),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-title {
+    opacity: 0;
+    letter-spacing: 2px;
+    transform: translateY(40px);
+    transition: opacity 1.2s ease,
+                transform 1.2s ease,
+                letter-spacing 1.2s ease;
+}
+
+.fade-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.5px;
+}
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.cormorant-infant-regular {
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* PARTICLES BACKGROUND */
+#particles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+/* SIDEBAR */
+.sidebar {
+position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 18%;
+    background-color: #141212;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-top: 120px;
+    overflow-y: auto;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    transition: box-shadow 0.6s ease;
+    box-shadow:
+        8px 0 40px rgba(0,0,0,0.4);
+}
+
+.sidebar a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.sidebar a:hover {
+    color: white;
+    padding-left: 22px;
+}
+
+.sidebar a.active {
+    color: #c0392b;
+    border-left: 3px solid #c0392b;
+    padding-left: 18px;
+}
+
+.sidebar h3 {
+    color: #c0392b;
+    margin-bottom: 20px;
+    font-family: "Quintessential", serif;
+    font-size: 30px;
+}
+
+.sidebar a, a:hover, a.active {
+    font-size: 24px;
+    font-family: "Cormorant Infant", serif;
+    line-height: 1.8;
+}
+
+/* Progress container */
+.progress-track {
+    position: absolute;
+    right: 8px;
+    top: 20px;
+    bottom: 20px;
+
+    width: 3px;
+    background: rgba(255,255,255,0.08);
+}
+
+/* Progress fill */
+#progress-line {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+
+    background: #c0392b;
+    transition: height 0.1s linear;
+}
+
+/* CONTENT AREA */
+.main-content {
+    flex: 1;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-left: 240px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(192,57,43,0.5),
+        transparent
+    );
+    left: 40%;
+    position: absolute;
+}
+
+header h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 900;
+    color: #f4efe6;
+}
+
+h2.subtitle {
+    opacity: 0.7;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 900;
+    color: #f4efe6;
+}
+
+/* MAIN LAYOUT */
+.container {
+    margin: 40px auto;
+    padding: 20px;
+    width: 60%;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.15);
+    background-color: #cbbba9;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow: visible;
+    position:absolute;
+    left: 29%;
+    top: 200px;
+}
+
+h2 {
+    font-family: "Quintessential", serif;
+    font-weight: 700;
+    margin: 20px;
+    font-size: 25px;
+}
+
+p {
+    margin: 20px;
+    font-size: 18px;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 400;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* QUIZ */
+.question button {
+    display: block;
+    width: 100%;
+
+    margin: 8px 0;
+    padding: 10px 15px;
+
+    background: #222;
+    border: 1px solid #444;
+
+    color: white;
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.question button:hover {
+    background: #333;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    opacity: 0.6;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 400;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .sidebar {
+        position: relative;
+        top: auto;
+        width: 100%;
+    }
+
+    .centered-text {
+        padding: 50px 30px;
+    }
+}
