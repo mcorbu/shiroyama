@@ -1,5 +1,6 @@
-# shiroyama
+# Batalia de la Shiroyama - [mcorbu.github.io/shiroyama/](mcorbu.github.io/shiroyama/)
 Un site web static despre Batalia de la Shiroyama, Japonia, din 1877.
 
-#Versiuni:
-**PILOT** - prima versiune publicata, nefinalizata
+## Versiuni:
+**PILOT** - prima versiune publicata, nefinalizata; \
+**v1.0** - prima versiune completa, cu un meniu prietenos si interactiv.
