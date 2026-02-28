@@ -1,7 +1,8 @@
 # Batalia de la Shiroyama
-Site web informativ dedicat Bătăliei de la Shiroyama, confruntarea finală a Rebeliunii Satsuma și momentul care a marcat sfârșitul epocii samurailor în Japonia.
+Site web informativ dedicat Bătăliei de la Shiroyama, confruntarea finală a Rebeliunii Satsuma și momentul care a marcat sfârșitul epocii samurailor în Japonia. \
+Link: <https://mcorbu.github.io/shiroyama/>
 ## Despre proiect
-Acest site prezintă: \
+Acest site prezintă:
 * contextul istoric al Rebeliunii Satsuma
 * rolul lui Saigō Takamori
 * desfășurarea bătăliei din 24 septembrie 1877
