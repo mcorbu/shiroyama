@@ -1,4 +1,4 @@
-# Batalia de la Shiroyama - [mcorbu.github.io/shiroyama/](mcorbu.github.io/shiroyama/)
+# Batalia de la Shiroyama - <https://mcorbu.github.io/shiroyama/>
 Un site web static despre Batalia de la Shiroyama, Japonia, din 1877.
 
 ## Versiuni:
