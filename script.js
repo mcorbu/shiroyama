@@ -1,16 +1,3 @@
-// Quiz
-document.querySelectorAll("button").forEach(button => {
-    button.addEventListener("click", () => {
-        const result = document.getElementById("result");
-        if (button.dataset.correct === "true") {
-            result.textContent = "Corect!";
-        } else {
-            result.textContent = "Greșit!";
-        }
-    });
-});
-
-
 // Simple particles
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
@@ -97,7 +84,7 @@ function insertParagraphs(sectionId, paragraphs) {
 
     paragraphs.forEach(text => {
         const p = document.createElement("p");
-        p.textContent = text;
+        p.innerHTML = text;
         p.classList.add("fade-in");
         section.appendChild(p);
 
@@ -120,14 +107,20 @@ document.querySelectorAll(".fade-title").forEach(title => {
     observer.observe(title);
 });
 
+function formatExponents(text) {
+    return text.replace(/\[(\d+)\]/g,
+        "<sup class='exponent'>$1</sup>");
+}
+
 fetch("content.json")
     .then(res => res.json())
     .then(data => {
-        insertParagraphs("home", data.home.text);
-        insertParagraphs("meiji", data.meiji.text);
-        insertParagraphs("satsuma", data.satsuma.text);
-        insertParagraphs("shiroyama", data.shiroyama.text);
-        insertParagraphs("saigo", data.saigo.text);
+        insertParagraphs("home-text", data.home.text);
+        insertParagraphs("meiji-text", data.meiji.text);
+        insertParagraphs("satsuma-text", data.satsuma.text);
+        insertParagraphs("shiroyama-text", data.shiroyama.text);
+        insertParagraphs("saigo-text", data.saigo.text);
+        insertParagraphs("urmari-si-impact-text", data.urmari_si_impact.text);
     })
     .catch(err => console.error("JSON loading error:", err));
 
@@ -194,5 +187,18 @@ document.querySelectorAll(".sidebar a").forEach(anchor => {
             top: target.offsetTop - offset,
             behavior: "smooth"
         });
+    });
+});
+
+//Imagine fullscreen
+document.querySelectorAll(".content-image").forEach(img => {
+    img.addEventListener("click", () => {
+
+        if (!document.fullscreenElement) {
+            img.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+
     });
 });

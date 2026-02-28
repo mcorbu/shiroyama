@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bătălia de la Shiroyama</title>
+    <link rel="icon" href="favicon_io/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Quintessential&display=swap" rel="stylesheet">
@@ -24,14 +25,13 @@
 
         <nav class="sidebar">
             <h3>Meniu</h3>
-            <a href="#home">Acasă</a>
-            <a href="#meiji">Restaurarea Meiji</a>
-            <a href="#satsuma">Rebeliunea Satsuma</a>
-            <a href="#shiroyama">Bătălia de la Shiroyama</a>
-            <a href="#saigo">Moartea lui Saigō Takamori - mituri și legende</a>
-            <a href="#urmari-si-impact">Urmări și impact</a>
-            <a href="#galerie">Galerie</a>
-            <a href="#quiz">Quiz</a>
+            <a class="meniu" href="#home">Acasă</a>
+            <a class="meniu" href="#meiji">Restaurarea Meiji</a>
+            <a class="meniu" href="#satsuma">Rebeliunea Satsuma</a>
+            <a class="meniu" href="#shiroyama">Bătălia de la Shiroyama</a>
+            <a class="meniu" href="#saigo">Moartea lui Saigō Takamori - mituri și legende</a>
+            <a class="meniu" href="#urmari-si-impact">Urmări și impact</a>
+            <a class="meniu" href="#bibliografie">Bibliografie</a>
             <div class="progress-track">
             <div id="progress-line"></div>
         </nav>
@@ -40,66 +40,66 @@
             <section id="home">
                 <h2 class="fade-title">Introducere</h2>
                 <p>
-                    <span id="home"></span>
+                    <span id="home-text"></span>
                 </p>
             </section>
 
             <section id="meiji">
                 <h2 class="fade-title">Restaurarea Meiji</h2>
                 <p>
-                    <span id="meiji-prezentare"></span>
+                    <span id="meiji-text"></span>
                 </p>
             </section>
 
             <section id="satsuma">
                 <h2 class="fade-title">Rebeliunea Satsuma</h2>
                 <p>
-                    <span id="satsuma"></span>
+                    <span id="satsuma-text"></span>
                 </p>
             </section>
 
             <section id="shiroyama">
                 <h2 class="fade-title">Bătălia de la Shiroyama</h2>
                 <p>
-                    <span id="shiroyama"></span>
+                    <span id="shiroyama-text"></span>
                 </p>
             </section>
 
             <section id="saigo">
                 <h2 class="fade-title">Moartea lui Saigō Takamori - mituri și legende</h2>
                 <p>
-                    <span id="saigo"></span>
+                    <span id="saigo-text"></span>
                 </p>
             </section>
 
             <section id="urmari-si-impact">
                 <h2 class="fade-title">Urmări și impact</h2>
                 <p>
-                    <span id="urmari-si-impact"></span>
+                    <span id="urmari-si-impact-text"></span>
                 </p>
             </section>
 
-            <section id="galerie">
-                <h2 class="fade-title">Galerie</h2>
-                <div class="gallery">
-                    <img src="https://via.placeholder.com/300x200">
-                    <img src="https://via.placeholder.com/300x200">
-                    <img src="https://via.placeholder.com/300x200">
-                </div>
-            </section>
-
-            <section id="quiz">
-                <h2 class="fade-title">Quiz</h2>
-
-                <div class="question">
-                    <p>În ce an a avut loc bătălia?</p>
-                    <button data-correct="false">1868</button>
-                    <button data-correct="true">1877</button>
-                    <button data-correct="false">1890</button>
-                </div>
-
-                <p id="result"></p>
-            </section>
+            <section id="bibliografie">
+                <h2 class="fade-title">Bibliografie</h2>
+                <h3>I. Lucrări generale și speciale:</h3>
+                <ol>
+                    <li>Buck, James H., <i>The Satsuma Rebellion of 1877. From Kagoshima Through the Siege of Kumamoto Castle – Monumenta Nipponica</i>, Editura Sophia University, 1973.</li>
+                    <li>Hubbard, Ben, <i>Samuraii. Istoria elitei războinice a Japoniei</i>, Editura Rao, 2004.</li>
+                    <li>Ravina, Mark, <i>The Last Samurai: The Life and Battles of Saigō Takamori</i>, Editura Wiley, 2003.</li>
+                    <li>Ravina, Mark, <i>The Apocryphal Suicide of Saigō Takamori: Samurai ,Seppuku, and the Politics of Legend,</i> publicat în "The Journal of Asian Studies", 2010.</li>
+                    <li>Buruma, Ian, <i>Inventing Japan: 1853-1964</i>, Editura Modern Lib, 2004.</li>
+                </ol>
+                <h3>II. Site-uri web:</h3>
+                <ul>
+                    <li><a class="site" href="https://ro.wikipedia.org/wiki/Restaura%C8%9Bia_Meiji">https://ro.wikipedia.org/wiki/Restaura%C8%9Bia_Meiji</a></li>
+                    <li><a class="site" href="https://afe.easia.columbia.edu/special/japan_1750_meiji.htm">https://afe.easia.columbia.edu/special/japan_1750_meiji.htm</a></li>
+                    <li><a class="site" href="https://www.nippon.com/en/views/b06902/">https://www.nippon.com/en/views/b06902/</a></li>
+                    <li><a class="site" href="https://www.britannica.com/place/Japan/The-fall-of-the-Tokugawa">https://www.britannica.com/place/Japan/The-fall-of-the-Tokugawa</a></li>
+                    <li><a class="site" href="https://www.britannica.com/topic/Satsuma-Rebellion">https://www.britannica.com/topic/Satsuma-Rebellion</a></li>
+                    <li><a class="site" href="https://evenimentulistoric.ro/samurai-rebeliunea-satsuma-modernizare.html">https://evenimentulistoric.ro/samurai-rebeliunea-satsuma-modernizare.html</a></li>
+                    <li><a class="site" href="https://en.wikipedia.org/wiki/Satsuma_Rebellion">https://en.wikipedia.org/wiki/Satsuma_Rebellion</a></li>
+                    <li><a class="site" href="https://sengokuchronicles.com/battle-of-shiroyama/">https://sengokuchronicles.com/battle-of-shiroyama/</a></li>
+                </ul>
 
         </main>
 
@@ -110,6 +110,7 @@
     </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="images.js"></script>
+    <script defer src="script.js"></script>
 </body>
 </html>

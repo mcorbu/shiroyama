@@ -36,6 +36,32 @@ body::before {
     pointer-events: none;
 }
 
+.exponent {
+    cursor: help;
+    position: relative;
+}
+
+.exponent::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(20,20,20,0.95);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    font-size: 0.8rem;
+}
+
+.exponent:hover::after {
+    opacity: 1;
+}
+
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -120,7 +146,7 @@ position: fixed;
         8px 0 40px rgba(0,0,0,0.4);
 }
 
-.sidebar a {
+.sidebar a.meniu {
     color: #ccc;
     text-decoration: none;
     padding: 8px 14px;
@@ -131,12 +157,12 @@ position: fixed;
         padding-left 0.25s ease;
 }
 
-.sidebar a:hover {
+.sidebar a.meniu:hover {
     color: white;
     padding-left: 22px;
 }
 
-.sidebar a.active {
+.sidebar a.meniu.active {
     color: #c0392b;
     border-left: 3px solid #c0392b;
     padding-left: 18px;
@@ -149,7 +175,7 @@ position: fixed;
     font-size: 30px;
 }
 
-.sidebar a, a:hover, a.active {
+.sidebar a.meniu, a.meniu:hover, a.meniu.active {
     font-size: 24px;
     font-family: "Cormorant Infant", serif;
     line-height: 1.8;
@@ -229,60 +255,91 @@ h2.subtitle {
     position:absolute;
     left: 29%;
     top: 200px;
+    text-align: justify;
+}
+
+/* IMAGES */
+.image-block {
+    max-width: 320px;
+    margin: 25px 30px;
+}
+
+.image-block.left {
+    float: left;
+    margin-left: 0;
+}
+
+.image-block.right {
+    float: right;
+    margin-right: 0;
+}
+
+.image-block img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.image-block figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-top: 8px;
+}
+
+.image-block.center {
+    float: none;
+    display: block;
+    margin-left: 150px;
+    text-align: center;
+}
+
+.image-block.center img {
+    display: block;
+    margin: 0 auto;
+}
+
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.content-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.content-image:hover {
+    transform: scale(1.03);
 }
 
 h2 {
     font-family: "Quintessential", serif;
     font-weight: 700;
     margin: 20px;
-    font-size: 25px;
+    font-size: 26px;
 }
 
 p {
     margin: 20px;
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Cormorant Infant", serif;
     font-weight: 400;
 }
 
-/* GALLERY */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+h3 {
+    font-family: "Quintessential", serif;
+    font-weight: 700;
+    margin: 20px;
+    font-size: 22px;
 }
 
-.gallery img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* QUIZ */
-.question button {
-    display: block;
-    width: 100%;
-
-    margin: 8px 0;
-    padding: 10px 15px;
-
-    background: #222;
-    border: 1px solid #444;
-
-    color: white;
-    cursor: pointer;
-
-    transition: 0.25s ease;
-}
-
-.question button:hover {
-    background: #333;
+ol, ul {
+    margin: 20px 40px;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 /* FOOTER */
@@ -292,22 +349,4 @@ footer {
     opacity: 0.6;
     font-family: "Cormorant Infant", serif;
     font-weight: 400;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-        padding: 30px 20px;
-    }
-
-    .sidebar {
-        position: relative;
-        top: auto;
-        width: 100%;
-    }
-
-    .centered-text {
-        padding: 50px 30px;
-    }
 }
